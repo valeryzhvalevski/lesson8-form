@@ -1,0 +1,97 @@
+@import "./template";
+@import "./vars";
+
+body {
+  height: 100vh;
+  background-color: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    background-color: $window-color;
+    width: 550px;
+    padding: 40px;
+    h1 {
+      text-align: center;
+      font-size: $font-size;
+    }
+    h2 {
+      text-align: center;
+      font-size: $font-size;
+      font-weight: 500;
+      margin: 10px 0 30px 0;
+    }
+    form {
+      width: 60%;
+      margin: 0 auto;
+      input {
+        width: 100%;
+        padding-left: 10px;
+        &:first-of-type {
+          margin-bottom: 15px;
+        }
+        &:focus::placeholder {
+          color: #bbbbbb;
+        }
+      }
+      .birthday {
+        width: 100%;
+      }
+      label {
+        display: block;
+        font-size: $font-size;
+        color: $label-color;
+        margin: 20px 0 15px 0;
+      }
+      select {
+        padding-left: 10px;
+        color: $label-color;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('../IMG_0288.jpg');
+        background-repeat: no-repeat;
+        background-position: right center;
+      }
+      :nth-child(4) {
+        width: 25%;
+      }
+      :nth-child(5) {
+        width: 40%;
+        margin: 0 5px;
+      }
+      :nth-child(6) {
+        width: 25%;
+      }
+      button {
+        width: 100%;
+        margin: 15px 0;
+        color: $btn-text-color;
+        font-weight: bold;
+      }
+      .or {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        hr {
+          margin-top: 2px;
+          width: 35px;
+        }
+        p {
+          font-size: 0.8rem;
+          margin: 0 10px;
+          color: $label-color;
+        }
+      }
+      button {
+        &:first-of-type {
+          background-color: $registration;
+        }
+        &:last-of-type {
+          background-color: $facebook;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
