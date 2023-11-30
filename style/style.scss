@@ -43,31 +43,62 @@ body {
         color: $label-color;
         margin: 20px 0 15px 0;
       }
-      select {
-        padding-left: 10px;
-        color: $label-color;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        background-image: url('../IMG_0288.jpg');
-        background-repeat: no-repeat;
-        background-position: right center;
-      }
-      :nth-child(4) {
-        width: 25%;
-      }
-      :nth-child(5) {
-        width: 40%;
-        margin: 0 5px;
-      }
-      :nth-child(6) {
-        width: 25%;
+      .custom-select {
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        select {
+          padding-left: 10px;
+          color: $label-color;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          &:first-of-type {
+            width: 25%;
+          }
+          &:nth-of-type(2) {
+            width: 42%;
+            margin: 0 5px;
+          }
+          &:last-of-type {
+            width: 25%;
+          }
+        }
+        .arrow-down-container {
+          svg {
+            fill: $svg-col;
+            position: absolute;
+            top: 44%;
+            right: 10px;
+            width: 10px; 
+            height: 10px;
+            &:first-of-type {
+              right: 219px;
+            }
+            &:nth-of-type(2) {
+              right: 91px;
+            }
+          }
+        }
       }
       button {
         width: 100%;
         margin: 15px 0;
         color: $btn-text-color;
         font-weight: bold;
+        &:first-of-type {
+          background-color: $registration;
+          &:hover {
+            background-color: $registration-ho;
+          }
+        }
+        &:last-of-type {
+          background-color: $facebook;
+          margin-bottom: 0;
+          &:hover {
+            background-color: $facebook-ho;
+          }
+        }
       }
       .or {
         display: flex;
@@ -81,15 +112,6 @@ body {
           font-size: 0.8rem;
           margin: 0 10px;
           color: $label-color;
-        }
-      }
-      button {
-        &:first-of-type {
-          background-color: $registration;
-        }
-        &:last-of-type {
-          background-color: $facebook;
-          margin-bottom: 0;
         }
       }
     }
